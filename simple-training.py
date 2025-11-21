@@ -62,6 +62,7 @@ python trl/scripts/dpo.py \
 
 """
 python simple-training.py     --dataset_name ./babyai_gotolocal_dpo.jsonl     --model_name_or_path ./my_model     --learning_rate 5.0e-6     --num_train_epochs 1     --per_device_train_batch_size 2     --max_steps 1000     --gradient_accumulation_steps 8     --gradient_checkpointing     --eval_strategy no  --output_dir output_model    --no_remove_unused_columns     --use_peft     --lora_r 32     --lora_alpha 16
+python simple-training.py     --dataset_name ./babyai_gotoobjmazeopen_dpo.jsonl     --model_name_or_path   mrRL/Affine-ofdt-k4   --learning_rate 5.0e-6     --num_train_epochs 1     --per_device_train_batch_size 4     --max_steps 1000     --gradient_accumulation_steps 8     --gradient_checkpointing     --eval_strategy steps  --eval_steps 50  --output_dir output_model    --no_remove_unused_columns     --use_peft     --lora_r 32     --lora_alpha 16
 """
 
 import argparse
